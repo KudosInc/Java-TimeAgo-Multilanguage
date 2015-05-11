@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011 Kevin Sawicki <kevinsawicki@gmail.com>
+ * Copyright (c) 2015 Pedro Adame Vergara <pedro.a.1smr@gmail.com>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to
@@ -19,7 +19,7 @@
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
  * IN THE SOFTWARE.
  */
-package com.github.kevinsawicki.timeago;
+package com.github.kinnonii.timeago;
 
 import java.util.MissingResourceException;
 import java.util.ResourceBundle;
@@ -29,7 +29,7 @@ import java.util.ResourceBundle;
  */
 public class Messages {
 
-	private static final String BUNDLE_NAME = "com.github.kevinsawicki.timeago.messages"; //$NON-NLS-1$
+	private static final String BUNDLE_NAME = "com.github.kinnonii.timeago.messages"; //$NON-NLS-1$
 
 	private static final ResourceBundle RESOURCE_BUNDLE = ResourceBundle
 			.getBundle(BUNDLE_NAME);

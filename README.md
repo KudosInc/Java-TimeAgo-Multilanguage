@@ -1,4 +1,4 @@
-#Java 'TimeAgo' multilanguage library
+#Java 'TimeAgo' multilanguage library 1.5.0
 
 This is a Java port of the [jquery-timeago](https://github.com/rmm5t/jquery-timeago) plug-in.  Please visit the [jquery-timeago](http://rmm5t.github.com/jquery-timeago/) project page to read more about fuzzy timestamps.
 
@@ -19,7 +19,7 @@ This library is forked from Kevin Sawicki's 'java-timeago' to support more than 
 <dependency>
 	    <groupId>com.github.Kinnonii</groupId>
 	    <artifactId>java-timeago</artifactId>
-	    <version>timeago-1.1.3</version>
+	    <version>1.5.0</version>
 </dependency>
 ```
 ###Gradle
@@ -31,7 +31,7 @@ repositories {
 	    }
 }
 dependencies {
-	        compile 'com.github.Kinnonii:java-timeago:timeago-1.1.3'
+	        compile 'com.github.Kinnonii:java-timeago:1.5.0'
 }
 ```
 
@@ -69,11 +69,8 @@ dependencies {
 }
 ```
 
-##Currently in work
-* Deutsch
-* French
 
-It supports English, Spanish and Italian at the time.
+####It supports English, Spanish and Italian, French and German at the time.
 
 ##Usage
 
@@ -81,11 +78,13 @@ It supports English, Spanish and Italian at the time.
 TimeAgo time = new TimeAgo('en'); //For English text.
 //TimeAgo time = new TimeAgo('it'); //For Italian text.
 //TimeAgo time = new TimeAgo('es'); //For Spanish text.
+//TimeAgo time = new TimeAgo('de'); //For German text.
+//TimeAgo time = new TimeAgo('fr'); //For French text.
 
 
 long current = System.currentTimeMillis();
-String minutes = time.timeAgo(current - (15 * 60 * 1000));	// returns "15 minutes ago"
-String hours = time.timeUntil(current - (6 * 60 * 60 * 1000));	// returns "6 hours from now"
+String minutes = time.timeAgo(new Date(System.currentTimeMillis()));	// returns "15 minutes ago"
+String hours = time.timeUntil(new Date(System.currentTimeMillis()));	// returns "6 hours from now"
 ```
 
 
