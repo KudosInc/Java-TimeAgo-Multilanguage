@@ -84,8 +84,8 @@ TimeAgo time = new TimeAgo('en'); //For English text.
 
 
 long current = System.currentTimeMillis();
-String minutes = time.timeAgo(current - (15 * 60 * 1000));	// returns "15 minutes ago"
-String hours = time.timeUntil(current - (6 * 60 * 60 * 1000));	// returns "6 hours from now"
+String minutes = time.timeAgo(new Date(System.currentTimeMillis()));	// returns "15 minutes ago"
+String hours = time.timeUntil(new Date(System.currentTimeMillis()));	// returns "6 hours from now"
 ```
 
 
