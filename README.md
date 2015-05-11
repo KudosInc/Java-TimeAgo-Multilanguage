@@ -91,7 +91,9 @@ String hours = time.timeUntil(current - (6 * 60 * 60 * 1000));	// returns "6 hou
 
 ##Contribution
 
-If you would like to contribute locale-specific properties files please fork this repository and open a pull request.
+1. Fork this project
+2. Add your locale in the messages.properties file, following the pattern that I already have (I'll do the rest ;) )
+3. Open a pull request to this project's "dev" branch.
 
 ##Other
 
