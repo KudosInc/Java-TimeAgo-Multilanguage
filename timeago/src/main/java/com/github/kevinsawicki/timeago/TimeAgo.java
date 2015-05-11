@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011 Kevin Sawicki <kevinsawicki@gmail.com>
+ * Copyright (c) 2015 Pedro Adame <pedro.a.1smr@gmail.com>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to
@@ -50,23 +50,32 @@ public class TimeAgo {
 	private String months;
 	private String year;
 	private String years;
+	private String country;
+/**
+ * Constructor for the TimeAgo object.
+ * @param locale The country code for the desired language to display messages. Supported languages are 'en', 'es', 'it', 'fr' and 'de' at the time.
+ */
+	public TimeAgo(String locale) throws IllegalArgumentException{
+		init(locale);
+	}
 
-	public TimeAgo(String locale){
-
-		if(locale.equals("en")){
+	private void init(String locale){
+		if(locale.equals("en"))
 			initLanguage("EN");
-		}else if(locale.equals("es")){
+		else if(locale.equals("es"))
 			initLanguage("ES");
-		}else if(locale.equals("it")){
+		else if(locale.equals("it"))
 			initLanguage("IT");
-		}else if(locale.equals("fr")){
+		else if(locale.equals("fr"))
 			initLanguage("FR");
-		}else{
-			throw new IllegalArgumentException("Locale must be equals to 'es', 'en' or 'it'.");
-		}
+		else if(locale.equals("de"))
+			initLanguage("DE");
+		else
+			throw new IllegalArgumentException("Locale not recognised or it isn't supported yet.");
 	}
 
 	private void initLanguage(String language) {
+		country = language.toLowerCase();
 		prefixAgo = Messages.getString("TimeAgo.PREFIX_AGO" + "_" + language); //$NON-NLS-1$
 		suffixAgo = Messages.getString("TimeAgo.SUFFIX_AGO" + "_" + language); //$NON-NLS-1$
 		prefixFromNow = Messages.getString("TimeAgo.PREFIX_FROM_NOW" + "_" + language); //$NON-NLS-1$
@@ -450,4 +459,33 @@ public class TimeAgo {
 		this.years = years;
 		return this;
 	}
+	
+	/**
+	 * Returns the country code of the actual language.
+	 * @return Used country code.
+	 */ 
+
+	public String getCountryCode(){
+		return country;
+	}
+	
+	/**
+	 * Changes the language of the expressions to one of the supported ones.
+	 * @param locale The new language. Must be equals to 'en', 'es', 'it', 'fr' or 'de'.
+	 */
+	 public void changeLanguage(String locale){
+	 	if(locale.equals("en"))
+			initLanguage("EN");
+		else if(locale.equals("es"))
+			initLanguage("ES");
+		else if(locale.equals("it"))
+			initLanguage("IT");
+		else if(locale.equals("fr"))
+			initLanguage("FR");
+		else if(locale.equals("de"))
+			initLanguage("DE");
+		else
+			throw new IllegalArgumentException("Locale not recognised or it isn't supported yet.");
+		
+	 }
 }
