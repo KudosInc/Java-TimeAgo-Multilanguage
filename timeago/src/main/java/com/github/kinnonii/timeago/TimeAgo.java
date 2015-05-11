@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2015 Pedro Adame <pedro.a.1smr@gmail.com>
+ * Copyright (c) 2015 Pedro Adame Vergara <pedro.a.1smr@gmail.com>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to
@@ -19,7 +19,7 @@
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
  * IN THE SOFTWARE.
  */
-package com.github.kevinsawicki.timeago;
+package com.github.kinnonii.timeago;
 
 import java.text.MessageFormat;
 import java.util.Date;
