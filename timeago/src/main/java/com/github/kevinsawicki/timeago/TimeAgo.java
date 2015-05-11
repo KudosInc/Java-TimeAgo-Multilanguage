@@ -59,6 +59,8 @@ public class TimeAgo {
 			initLanguage("ES");
 		}else if(locale.equals("it")){
 			initLanguage("IT");
+		}else if(locale.equals("fr")){
+			initLanguage("FR");
 		}else{
 			throw new IllegalArgumentException("Locale must be equals to 'es', 'en' or 'it'.");
 		}
