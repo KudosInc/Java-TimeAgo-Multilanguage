@@ -2,7 +2,7 @@
 
 This is a Java port of the [jquery-timeago](https://github.com/rmm5t/jquery-timeago) plug-in.  Please visit the [jquery-timeago](http://rmm5t.github.com/jquery-timeago/) project page to read more about fuzzy timestamps.
 
-This library is forked from Kevin Sawicki's 'java-timeago' to support more than only one language. Feel free to fork it and add your own! 
+This library is forked from Kevin Sawicki's 'java-timeago' to support more than only one language. Feel free to fork it and add your own!
 
 ####It supports English, Spanish, Italian, French and German at the time.
 
@@ -32,7 +32,7 @@ repositories {
 	    }
 }
 dependencies {
-	        compile 'com.github.Kinnonii:Java-TimeAgo-Multilanguage:1.5.0'
+	        compile 'com.github.kinnonii:java-timeAgo-multilanguage:1.5.0'
 }
 ```
 
@@ -65,7 +65,7 @@ repositories {
 }
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.github.Kinnonii:Java-TimeAgo-Multilanguage:1.5.0'
+    compile 'com.github.kinnonii:java-timeAgo-multilanguage:1.5.0'
     //Other libraries...
 }
 ```
@@ -73,11 +73,11 @@ dependencies {
 ##Usage
 
 ```java
-TimeAgo time = new TimeAgo('en'); //For English text.
-//TimeAgo time = new TimeAgo('it'); //For Italian text.
-//TimeAgo time = new TimeAgo('es'); //For Spanish text.
-//TimeAgo time = new TimeAgo('de'); //For German text.
-//TimeAgo time = new TimeAgo('fr'); //For French text.
+TimeAgo time = new TimeAgo("en"); //For English text.
+//TimeAgo time = new TimeAgo("it"); //For Italian text.
+//TimeAgo time = new TimeAgo("es"); //For Spanish text.
+//TimeAgo time = new TimeAgo("de"); //For German text.
+//TimeAgo time = new TimeAgo("fr"); //For French text.
 
 
 long current = System.currentTimeMillis();
