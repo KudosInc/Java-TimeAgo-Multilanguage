@@ -73,11 +73,11 @@ dependencies {
 ##Usage
 
 ```java
-TimeAgo time = new TimeAgo('en'); //For English text.
-//TimeAgo time = new TimeAgo('it'); //For Italian text.
-//TimeAgo time = new TimeAgo('es'); //For Spanish text.
-//TimeAgo time = new TimeAgo('de'); //For German text.
-//TimeAgo time = new TimeAgo('fr'); //For French text.
+TimeAgo time = new TimeAgo("en"); //For English text.
+//TimeAgo time = new TimeAgo("it"); //For Italian text.
+//TimeAgo time = new TimeAgo("es"); //For Spanish text.
+//TimeAgo time = new TimeAgo("de"); //For German text.
+//TimeAgo time = new TimeAgo("fr"); //For French text.
 
 
 long current = System.currentTimeMillis();
