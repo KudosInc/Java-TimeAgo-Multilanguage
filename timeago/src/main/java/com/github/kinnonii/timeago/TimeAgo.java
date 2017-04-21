@@ -70,6 +70,8 @@ public class TimeAgo {
 			initLanguage("FR");
 		else if(locale.equals("de"))
 			initLanguage("DE");
+		else if(locale.equals("el"))
+			initLanguage("EL");
 		else
 			throw new IllegalArgumentException("Locale not recognised or it isn't supported yet.");
 	}
