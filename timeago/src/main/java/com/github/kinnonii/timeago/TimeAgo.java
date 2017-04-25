@@ -55,18 +55,17 @@ public class TimeAgo {
 	private String country;
 /**
  * Constructor for the TimeAgo object.
- * @param locale The country code for the desired language to display messages. Supported languages are 'en', 'es', 'it', 'fr' and 'de' at the time.
+ * @param locale The country code for the desired language to display messages. Supported languages are 'en', 'es', 'it', 'fr', 'de', 'el', 'cs' and 'pt' at the time.
  */
 	public TimeAgo(String locale) throws IllegalArgumentException{
 		init(locale);
 	}
 
 	private void init(String locale){
-		if (Arrays.asList(SUPPORTED_LOCALES).contains(locale)) {
-			initLanguage(locale.toUpperCase());
-		} else {
+		if (!Arrays.asList(SUPPORTED_LOCALES).contains(locale)) {
 			throw new IllegalArgumentException("Locale not recognised or it isn't supported yet.");
 		}
+		initLanguage(locale.toUpperCase());
 	}
 
 	private void initLanguage(String language) {
@@ -466,13 +465,8 @@ public class TimeAgo {
 	
 	/**
 	 * Changes the language of the expressions to one of the supported ones.
-	 * @param locale The new language. Must be equals to 'en', 'es', 'it', 'fr' or 'de'.
 	 */
 	 public void changeLanguage(String locale){
-		 if (Arrays.asList(SUPPORTED_LOCALES).contains(locale)) {
-			 initLanguage(locale.toUpperCase());
-		 } else {
-			 throw new IllegalArgumentException("Locale not recognised or it isn't supported yet.");
-		 }
+		 init(locale);
 	 }
 }

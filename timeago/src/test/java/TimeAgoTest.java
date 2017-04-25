@@ -247,7 +247,7 @@ public class TimeAgoTest extends TestCase {
 	public void testAgoMonthNotSupported() {
 		try {
 			TimeAgo ago = new TimeAgo("oo");
-		}catch (Exception e) {
+		} catch (Exception e) {
 			assertEquals(IllegalArgumentException.class, e.getClass());
 			assertEquals("Locale not recognised or it isn't supported yet.", e.getMessage());
 		}
